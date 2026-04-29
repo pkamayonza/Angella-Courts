@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Rooms - Angella Courts</title>
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+
+<!-- HEADER & NAVIGATION -->
+<header class="header">
+  <div class="header-container">
+    <a href="../rooms.html" class="logo">
+      <img src="../Images/Angella-Courts-Logo.jpeg" alt="Angella Courts" height="45" />
+    </a>
+    
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="booking.html">Book Now</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    
+    <a href="booking.html" class="btn btn-primary nav-cta">Book Now</a>
+    
+    <button class="hamburger" type="button" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  
+  <nav class="mobile-nav">
+    <a href="../index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="booking.html">Book Now</a>
+    <a href="contact.html">Contact</a>
+    <a href="booking.html" class="btn btn-primary nav-cta">Book Now</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h1>Our Rooms</h1>
+  <p>Choose from a variety comfortable room options designed for student life at Kabale University</p>
+</section>
+
+<!-- FILTER BAR -->
+<div class="section">
+  <div class="filter-bar">
+    <div class="filter-group">
+      <label for="filterType">Filter by Room Type</label>
+      <select id="filterType">
+        <option value="all">All Room Types</option>
+        <option value="single">Single Room</option>
+        <option value="double">Double Room</option>
+        <option value="triple">Triple Room</option>
+      </select>
+    </div>
+    
+    <div class="filter-group">
+      <label for="filterAvailability">Filter by Availability</label>
+      <select id="filterAvailability">
+        <option value="all">All Status</option>
+        <option value="available">Available</option>
+        <option value="booked">Fully Booked</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- ROOMS GRID -->
+<section class="section">
+  <div class="rooms-grid">
+    
+    <!-- Room 1: Single Self-Contained -->
+    <div class="room-card room-1" data-type="single" data-availability="available" data-room-name="Single Self-Contained">
+      <div class="room-image">
+        <span class="room-badge badge-available">Available</span>
+      </div>
+      <div class="room-content">
+        <h3 class="room-name">Single Self-Contained</h3>
+        <p class="room-price">UGX 650,000/semester</p>
+        <p class="room-capacity"> 1 Student</p>
+        <p class="room-description">Private, fully self-contained room with a bathroom. Perfect for students who value privacy and comfort.</p>
+        <ul class="room-features">
+          <li>Private bathroom</li>
+          <li>Study desk with chair</li>
+          <li>Wardrobe for storage</li>                                                                                                                                                      
+          <li>Electricity and water included</li>
+        </ul>
+        <a href="booking.html?room=Single%20Self-Contained" class="btn btn-primary">Book This Room</a>
+      </div>
+    </div>
+    
+    <!-- Room 2: Double Self-Contained -->
+    <div class="room-card room-2" data-type="double" data-availability="available" data-room-name="Double Self-Contained">
+      <div class="room-image">
+        <span class="room-badge badge-available">Available</span>
+      </div>
+      <div class="room-content">
+        <h3 class="room-name">Double Self-Contained</h3>
+        <p class="room-price">UGX 1,100,000/semester</p>
+        <p class="room-capacity"> 2 Students</p>
+        <p class="room-description">Spacious double room shared by 2 students. Each gets their own study desk and the room includes a private bathroom.</p>
+        <ul class="room-features">
+          <li>Shared between 2 students</li>
+          <li>Private bathroom</li>
+          <li>2 Study desks with chairs</li>
+          <li>2 Wardrobes</li>
+          <li>Electricity and water included</li>
+        </ul>
+        <a href="booking.html?room=Double%20Self-Contained" class="btn btn-primary">Book This Room</a>
+      </div>
+    </div>
+    
+    <!-- Room 3: Single Shared Bathroom -->
+    <div class="room-card room-3" data-type="single" data-availability="available" data-room-name="Single Shared Bathroom">
+      <div class="room-image">
+        <span class="room-badge badge-available">Available</span>
+      </div>
+      <div class="room-content">
+        <h3 class="room-name">Single Shared Bathroom</h3>
+        <p class="room-price">UGX 450,000/semester</p>
+        <p class="room-capacity"> 1 Student</p>
+        <p class="room-description">Affordable single room with shared bathroom facilities. Great value for budget-conscious students. Clean, maintained bathroom block.</p>
+        <ul class="room-features">
+          <li>Study desk with chair</li>
+          <li>Wardrobe for storage</li>
+          <li>Shared bathroom block</li>
+          <li>Electricity and waterincluded</li>
+        </ul>
+        <a href="booking.html?room=Single%20Shared%20Bathroom" class="btn btn-primary">Book This Room</a>
+      </div>
+    </div>
+    
+    <!-- Room 4: Double Shared Bathroom -->
+    <div class="room-card room-4" data-type="double" data-availability="booked" data-room-name="Double Shared Bathroom">
+      <div class="room-image">
+        <span class="room-badge badge-booked">Fully Booked</span>
+      </div>
+      <div class="room-content">
+        <h3 class="room-name">Double Shared Bathroom</h3>
+        <p class="room-price">UGX 800,000/semester</p>
+        <p class="room-capacity"> 2 Students</p>
+        <p class="room-description">Budget-friendly option for 2 students sharing a spacious room with shared bathroom facilities. Joining a community of students.</p>
+        <ul class="room-features">
+          <li>Shared between 2 students</li>
+          <li>2 Single beds</li>
+          <li>2 Study desks</li>
+          <li>Shared bathroom block</li>
+          <li>Electricity and water included</li>
+        </ul>
+        <a href="booking.html?room=Double%20Shared%20Bathroom" class="btn btn-secondary">On Waitlist</a>
+      </div>
+    </div>
+    
+    <!-- Room 5: Premium Single -->
+    <div class="room-card room-5" data-type="single" data-availability="available" data-room-name="Premium Single">
+      <div class="room-image">
+        <span class="room-badge badge-available">Available</span>
+      </div>
+      <div class="room-content">
+        <h3 class="room-name"> Single </h3>
+        <p class="room-price">UGX 750,000/semester</p>
+        <p class="room-capacity"> 1 Student</p>
+        <p class="room-description">Our premium offering. Upscale self-contained room with modern amenities, tiled flooring, and Wi-Fi router access point.</p>
+        <ul class="room-features">
+          <li>Private bathroom</li>
+          <li>Study desk with storage</li>
+          <li>Electricity and water included</li>
+        </ul>
+        <a href="booking.html?room=Premium%20Single" class="btn btn-primary">Book This Room</a>
+      </div>
+    </div>
+    
+    <!-- Room 6: Triple Room -->
+    <div class="room-card room-6" data-type="triple" data-availability="available" data-room-name="Triple Room">
+      <div class="room-image">
+        <span class="room-badge badge-available">Available</span>
+      </div>
+      <div class="room-content">
+        <h3 class="room-name">Double Room</h3>
+        <p class="room-price">UGX 1,050,000/semester</p>
+        <p class="room-capacity">2 Students</p>
+        <p class="room-description">Budget-friendly for 3 roommates. Spacious room with shared bathroom. Great for friends who want to stay together.</p>
+        <ul class="room-features">
+          <li>2 single beds</li>
+          <li>Shared bathroom block</li>
+          <li>Enough storage</li>
+          <li>Electricity and water included</li>
+        </ul>
+        <a href="booking.html?room=Triple%20Room" class="btn btn-primary">Book This Room</a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Angella Courts</h4>
+      <p>Comfortable student accommodation near Kabale University.</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Contact Info</h4>
+      <p> Phone: <a href="tel:+256740603461">+256 740 603 461</a></p>
+      <p> WhatsApp: <a href="https://wa.me/256740603461" target="_blank">+256 740 603 461</a></p>
+      <p> Email: <a href="mailto:angellacourtshostels@gmail.com">angellacourtshostels@gmail.com</a></p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Location</h4>
+      <p>Plot 12, University Road<br>Kabale, Uganda<br>5 minute walk from Main Gate</p>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2026 Angella Courts.</p>
+  </div>
+</footer>
+
+<script src="../scripts/main.js"></script>
+</body>
+</html>
