@@ -30,3 +30,19 @@ app.use(
   "/api/auth",
   authRoutes
 );
+
+const authMiddleware =
+require("./middleware/auth");
+
+app.get(
+    "/api/profile",
+    authMiddleware,
+    (req, res) => {
+
+        res.json({
+            message: "Protected route",
+            user: req.user
+        });
+
+    }
+);
