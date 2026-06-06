@@ -39,3 +39,48 @@ exports.getRoom = async (req, res) => {
     });
   }
 };
+
+exports.createRoom = async (req, res) => {
+
+    try {
+
+        const {
+            room_number,
+            room_type,
+            price,
+            description
+        } = req.body;
+
+        const room = await pool.query(
+            `
+            INSERT INTO rooms
+            (
+                room_number,
+                room_type,
+                price,
+                description
+            )
+
+            VALUES ($1,$2,$3,$4)
+
+            RETURNING *
+            `,
+            [
+                room_number,
+                room_type,
+                price,
+                description
+            ]
+        );
+
+        res.status(201).json(room.rows[0]);
+
+    } catch (error) {
+
+        res.status(500).json({
+            error: error.message
+        });
+
+    }
+
+};
