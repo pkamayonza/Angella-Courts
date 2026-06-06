@@ -34,6 +34,14 @@ app.use(
 const authMiddleware =
 require("./middleware/auth");
 
+const roomRoutes =
+require("./routes/roomRoutes");
+
+app.use(
+  "/api/rooms",
+  roomRoutes
+);
+
 app.get(
     "/api/profile",
     authMiddleware,
